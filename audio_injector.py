@@ -1,10 +1,14 @@
 #!/usr/bin/python
 
-import binascii
+import binascii,sys
 
-audio_file_path = "a.mp3" # audio file that you want to inject to image.
-image_template = "123.png" # image file that you want to inject the audio to it.
-injected_image = "123nn.png" # final image file that contains the injected audio file.
+if len(sys.argv) != 4:
+  print "Usage : python audio_injector.py [template_image] [template_audio_file] [final_image_file]"
+  sys.exit(0)
+
+audio_file_path = sys.argv[2] # audio file that you want to inject to image.
+image_template = sys.argv[1] # image file that you want to inject the audio to it.
+injected_image = sys.argv[3] # final image file that contains the injected audio file.
 
 def read_audio_file():
  audio_file = open(audio_file_path,"rb")
