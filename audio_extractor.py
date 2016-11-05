@@ -1,9 +1,12 @@
 #!usr/bin/python
 
-import binascii
+import binascii,sys
 
-injected_image = "123nn.png"
-extracted_audio_result = "final_mp3.mp3"
+if len(sys.argv) != 3:
+  print "Usage : python audio_extractor.py [injected_image_file] [audio_file_result]"
+  sys.exit(0)
+injected_image = sys.argv[1]
+extracted_audio_result = sys.argv[2]
 def extract_audio():
  open_image_file = open(injected_image,"rb")
  data = open_image_file.read()
