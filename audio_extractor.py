@@ -17,4 +17,8 @@ def extract_audio():
  write_audio_file = open(extracted_audio_result,"wb")
  write_audio_file.write(binary_data_for_audio_file)
  write_audio_file.close()
-extract_audio()
+ return True
+
+if extract_audio():
+ print "[+]Done !"
+ print "[+]Audio data extracted to {0} file ..".format(extracted_audio_result)
