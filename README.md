@@ -9,4 +9,5 @@ to extract audio file from image run :
 
 #Examples :
 to inject image : python audio_injector.py 123.png a.mp3 askar.png
+
 to extract audio from image : python audio_extractor.py askar.png askar.mp3 640420
