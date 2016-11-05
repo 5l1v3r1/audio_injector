@@ -2,10 +2,9 @@
 
 import binascii
 
-audio_file_path = "a.mp3"
-image_template = "123.png"
-injected_image = "123nn.png"
-extracted_audio_result = "afinal.mp3"
+audio_file_path = "a.mp3" # audio file that you want to inject to image.
+image_template = "123.png" # image file that you want to inject the audio to it.
+injected_image = "123nn.png" # final image file that contains the injected audio file.
 
 def read_audio_file():
  audio_file = open(audio_file_path,"rb")
